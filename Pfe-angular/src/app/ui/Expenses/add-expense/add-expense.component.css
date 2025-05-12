@@ -1,0 +1,58 @@
+form.horizontal-form {
+    width: 100%;
+    padding: 40px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: #f9f9f9;
+  }
+  .form-title{
+    margin-left: 280px;
+    margin-top: 10px;
+  }
+  
+  /* Chaque ligne du formulaire */
+  .form-row {
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    gap: 20px;
+  }
+  
+  /* Labels à gauche, alignés verticalement */
+  .form-row label {
+    width: 180px; /* même largeur pour tous les labels */
+    font-weight: 600;
+    color: #333;
+    text-align: left;
+  }
+  
+  /* Champ à droite qui prend toute la place disponible */
+  .form-row input[matInput],
+  .form-row textarea[matInput],
+  .form-row mat-form-field {
+    flex: 1;
+    width: 100%;
+    margin: 0;
+  }
+  
+  
+  .full-width-row {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0 20px;
+    gap: 15px;
+    margin-right: 180px;
+  }
+  
+  button[mat-raised-button] {
+    padding: 10px 24px;
+    font-size: 15px;
+    font-weight: 500;
+  }
+  .error-text {
+    color: red;
+    font-size: 12px;
+  }
+  

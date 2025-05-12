@@ -1,0 +1,14 @@
+import { Component , Inject} from '@angular/core';
+import { MAT_DIALOG_DATA , MatDialogModule} from '@angular/material/dialog';
+
+
+@Component({
+  selector: 'app-user-details-dialog',
+  standalone: true,
+  imports: [MatDialogModule],
+  templateUrl: './user-details-dialog.component.html',
+  styleUrl: './user-details-dialog.component.css'
+})
+export class UserDetailsDialogComponent {
+  constructor(@Inject(MAT_DIALOG_DATA) public data: any) {}
+}

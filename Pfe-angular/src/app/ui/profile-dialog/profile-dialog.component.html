@@ -1,0 +1,42 @@
+<h2 mat-dialog-title>Profil</h2>
+
+<!-- Conteneur pour la photo de profil -->
+<div class="profile-photo-container">
+  <img [src]="user.photo || 'assets/images/perso.jpg'" alt="Photo de profil" class="profile-photo">
+</div>
+
+<mat-dialog-content>
+  <form #profileForm="ngForm" class="profile-form">
+    <!-- Ligne pour Prénom et Nom -->
+    <div class="form-row">
+      <div class="form-field">
+        <label for="family_name">lastName</label>
+        <mat-form-field appearance="outline" class="full-width">
+          <input matInput [(ngModel)]="user.family_name" name="family_name" id="family_name" required>
+        </mat-form-field>
+      </div>
+
+      <div class="form-field">
+        <label for="given_name">firstName</label>
+        <mat-form-field appearance="outline" class="full-width">
+          <input matInput [(ngModel)]="user.given_name" name="given_name" id="given_name" required>
+        </mat-form-field>
+      </div>
+    </div>
+
+    <!-- Ligne pour Email -->
+    <div class="form-row">
+      <div class="form-field full-width">
+        <label for="email">Email</label>
+        <mat-form-field appearance="outline" class="full-width">
+          <input matInput [(ngModel)]="user.email" name="email" id="email" required>
+        </mat-form-field>
+      </div>
+    </div>
+  </form>
+</mat-dialog-content>
+
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close>Annuler</button>
+  <button mat-raised-button color="primary" (click)="save()">Enregistrer</button>
+</mat-dialog-actions>

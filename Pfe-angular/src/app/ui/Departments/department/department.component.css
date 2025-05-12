@@ -1,0 +1,217 @@
+.layout {
+    padding: 20px; /* Ajoute un padding interne */
+    display: flex;
+    height: 100vh;
+  
+  }
+  
+  app-menu {
+    flex: 0 0 200px;
+    height: 100%;
+    background-color: #f8f9fa;
+    border-right: 1px solid #e0e0e0;
+  }
+  
+  .content-wrapper {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    overflow: hidden;
+  }
+  .mat-icon-button {
+    
+    background-color: transparent !important;
+  box-shadow: none !important;
+  color: #ff6f3d 
+  }
+  
+  
+  
+  
+  
+  .content {
+    flex: 1;
+    padding: 1rem;
+    overflow-y: auto;
+  }
+  
+  
+  
+  .about-us-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+    background-color: #f9f9f9; /* Couleur de fond */
+  }
+  
+  .about-us-text {
+    max-width: 50%;
+  }
+  
+  .about-us-text h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #333;
+  }
+  
+  .about-us-text p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #666;
+    margin-bottom: 1.5rem;
+  }
+  
+  .discover-button {
+    background-color: #ff6f3d;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .discover-button:hover {
+    background-color: #e65a2c;
+  }
+  
+  .about-us-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  .reimbursement-section {
+    text-align: center;
+    margin-top: 3rem;
+  }
+  
+  .reimbursement-section h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    color: #333;
+  }
+  
+  .reimbursement-cards {
+    display: flex;
+    justify-content: space-between;
+    gap: 1.5rem;
+  }
+  
+  .card {
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 1.5rem;
+    text-align: center;
+    flex: 1 1 calc(30% - 1.5rem); /* Chaque carte occupe environ 30% de la largeur */
+    max-width: calc(28% - 1.5rem); /* Limite la largeur des cartes */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+  }
+  
+  .card img {
+    max-width: 50px;
+    margin-bottom: 1rem;
+  }
+  
+  .card h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #333;
+  }
+  
+  .card p {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #666;
+    margin-bottom: 1rem;
+  }
+  
+  .card a {
+    color: #ff6f3d;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  .card a:hover {
+    color: #e65a2c;
+    text-decoration: underline;
+  }
+  
+  .app-description-section {
+    margin-top: 3rem;
+    padding: 2rem;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .app-description-section h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+  
+  .app-description-section p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #666;
+    margin-bottom: 1.5rem;
+    text-align: justify;
+  }
+  
+  .app-description-section ul {
+    list-style-type: disc;
+    margin: 1rem 0 1.5rem 2rem;
+    color: #666;
+  }
+  
+  .app-description-section ul li {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .app-description-section ul li::marker {
+    color: #ff6f3d;
+  }
+  
+  .app-description-section p:last-child {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+  }
+  
+  .solution-section {
+    text-align: center;
+    margin-top: 3rem;
+  }
+  
+  .solution-section h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    color: #333;
+  }
+  
+  .solution-cards {
+    display: flex; /* Utilisez Flexbox pour aligner les cartes côte à côte */
+    justify-content: space-around; /* Ajoutez de l'espace égal autour des cartes */
+    gap: 1.5rem; /* Espacement entre les cartes */
+    flex-wrap: wrap; /* Permet aux cartes de passer à la ligne sur petits écrans */
+  }
+  

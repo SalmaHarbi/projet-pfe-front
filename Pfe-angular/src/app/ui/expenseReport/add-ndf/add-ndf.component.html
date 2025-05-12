@@ -1,0 +1,82 @@
+<form [formGroup]="noteForm" (ngSubmit)="ajouterNoteDeFrais()" class="horizontal-form">
+    <!-- Titre -->
+    <div class="form-row">
+      <label for="titre">Titre</label>
+      <input matInput formControlName="titre" id="titre">
+      <div *ngIf="noteForm.get('titre')?.hasError('required') && noteForm.get('titre')?.touched">
+        <small class="error-text">Le titre est requis.</small>
+      </div>
+    </div>
+  
+    <!-- Date de soumission -->
+    <div class="form-row">
+      <label for="datesoumission">Date de soumission</label>
+      <mat-form-field appearance="fill" class="date-field">
+        <input matInput [matDatepicker]="picker1" formControlName="datesoumission" id="datesoumission">
+        <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+        <mat-datepicker #picker1></mat-datepicker>
+      </mat-form-field>
+      <div *ngIf="noteForm.get('datesoumission')?.hasError('required') && noteForm.get('datesoumission')?.touched">
+        <small class="error-text">La date de soumission est requise.</small>
+      </div>
+    </div>
+  
+    <!-- Motif -->
+    <div class="form-row">
+      <label for="motifnotefrais">Motif</label>
+      <input matInput formControlName="motifnotefrais" id="motifnotefrais">
+      <div *ngIf="noteForm.get('motifnotefrais')?.hasError('required') && noteForm.get('motifnotefrais')?.touched">
+        <small class="error-text">Le motif est requis.</small>
+      </div>
+    </div>
+  
+    <!-- Statut -->
+    <div class="form-row">
+      <label for="statut">Statut</label>
+      <input matInput formControlName="statut" id="statut">
+      <div *ngIf="noteForm.get('statut')?.hasError('required') && noteForm.get('statut')?.touched">
+        <small class="error-text">Le statut est requis.</small>
+      </div>
+    </div>
+  
+    <!-- Commentaire -->
+    <div class="form-row">
+      <label for="commentaire">Commentaire</label>
+      <input matInput formControlName="commentaire" id="commentaire">
+      <div *ngIf="noteForm.get('commentaire')?.hasError('required') && noteForm.get('commentaire')?.touched">
+        <small class="error-text">Le commentaire est requis.</small>
+      </div>
+    </div>
+  
+    <!-- Date approbation/rejet -->
+    <div class="form-row">
+      <label for="dateapprobationrejet">Date approbation/rejet</label>
+      <mat-form-field appearance="fill" class="date-field">
+        <input matInput [matDatepicker]="picker2" formControlName="dateapprobationrejet" id="dateapprobationrejet">
+        <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+        <mat-datepicker #picker2></mat-datepicker>
+      </mat-form-field>
+      <div *ngIf="noteForm.get('dateapprobationrejet')?.hasError('required') && noteForm.get('dateapprobationrejet')?.touched">
+        <small class="error-text">La date d'approbation/rejet est requise.</small>
+      </div>
+    </div>
+  
+    <!-- Montant total -->
+    <div class="form-row">
+      <label for="montanttotal">Montant total</label>
+      <input matInput formControlName="montanttotal" id="montanttotal">
+      <div *ngIf="noteForm.get('montanttotal')?.hasError('required') && noteForm.get('montanttotal')?.touched">
+        <small class="error-text">Le montant total est requis.</small>
+      </div>
+      <div *ngIf="noteForm.get('montanttotal')?.hasError('pattern') && noteForm.get('montanttotal')?.touched">
+        <small class="error-text">Le montant total doit être un nombre valide.</small>
+      </div>
+    </div>
+  
+    <!-- Boutons -->
+    <div class="form-row full-width-row">
+      <button mat-raised-button color="primary" type="submit">Ajouter la note</button>
+      <button mat-raised-button color="warn" type="button" (click)="annuler()" >Annuler</button>
+    </div>
+  </form>
+  

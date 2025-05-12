@@ -1,0 +1,60 @@
+
+/* Conteneur pour centrer la photo */
+.profile-photo-container {
+  display: flex;
+  justify-content: center; /* Centre horizontalement */
+  margin-bottom: 24px; /* Ajoute un espace sous la photo */
+}
+
+/* Style de la photo de profil */
+.profile-photo {
+  width: 120px; /* Largeur de la photo */
+  height: 120px; /* Hauteur de la photo */
+  border-radius: 50%; /* Rend la photo circulaire */
+  object-fit: cover; /* Ajuste l'image pour qu'elle remplisse le conteneur */
+  border: 3px solid #ccc; /* Ajoute une bordure légère */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ajoute une ombre légère */
+}
+
+/* Style général pour les champs */
+mat-form-field {
+  margin-bottom: 10px; /* Ajoute un espace entre les champs */
+}
+
+mat-dialog-content {
+  padding: 10px; /* Ajoute un padding interne */
+}
+
+/* Style pour les champs */
+.profile-form {
+  display: flex;
+  flex-direction: column;
+  gap: -0px; /* Ajoute un espace entre les lignes */
+}
+
+.form-row {
+  display: flex;
+  gap: 16px; /* Ajoute un espace entre les colonnes */
+}
+
+.form-field {
+  flex: 1; /* Les champs prennent une largeur égale */
+}
+
+.full-width {
+  width: 100%; /* Champ qui prend toute la largeur */
+}
+
+/* Style des labels */
+label {
+  display: block;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 4px; /* Ajoute un espace entre le label et le champ */
+  color: #333; /* Couleur du texte */
+}
+
+/* Style des actions */
+mat-dialog-actions {
+  margin-top: 16px; /* Ajoute un espace au-dessus des boutons */
+}

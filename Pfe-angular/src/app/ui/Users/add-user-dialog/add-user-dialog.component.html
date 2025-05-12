@@ -1,0 +1,41 @@
+<h2 mat-dialog-title>Ajouter un utilisateur</h2>
+<mat-dialog-content>
+  <form [formGroup]="userForm">
+    <mat-form-field appearance="outline" class="full-width">
+      <mat-label>Nom</mat-label>
+      <input matInput placeholder="Entrez le nom" formControlName="nom" required>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="full-width">
+      <mat-label>Prénom</mat-label>
+      <input matInput placeholder="Entrez le prénom" formControlName="prenom" required>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="full-width">
+      <mat-label>Email</mat-label>
+      <input matInput type="email" placeholder="Entrez l'email" formControlName="email" required>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="full-width">
+      <mat-label>Mot de passe</mat-label>
+      <input matInput type="password" placeholder="Entrez le mot de passe" formControlName="motDePasse" required>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="full-width">
+      <mat-label>Rôle</mat-label>
+      <mat-select formControlName="role">
+        <mat-option value="Employee">Employee</mat-option>
+        <mat-option value="Manager">Manager</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <div class="full-width">
+      <label for="photo">Photo</label>
+      <input id="photo" type="file" (change)="onFileChange($event)" accept="image/*">
+    </div>
+  </form>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close>Annuler</button>
+  <button mat-raised-button color="primary" (click)="onSave()">Enregistrer</button>
+</mat-dialog-actions>

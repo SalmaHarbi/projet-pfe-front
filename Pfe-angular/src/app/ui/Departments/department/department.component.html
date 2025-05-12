@@ -1,0 +1,48 @@
+<app-header (toggleMenu)="toggleMenu()"></app-header>
+
+<div class="layout" style="background: url('/assets/images/hero-bg-abstract.jpg') no-repeat center center fixed; background-size: cover; min-height: 100vh;">
+  <div class="content-wrapper">
+    <div class="content" [class.full-width]="!isMenuVisible">
+
+      <div class="solution-section">
+        <h2>Liste des Départements</h2>
+
+        <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
+
+          <!-- Nom du département -->
+          <ng-container matColumnDef="nom">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header>Nom</th>
+            <td mat-cell *matCellDef="let element">{{ element.nom }}</td>
+          </ng-container>
+
+          <!-- Centre de coût -->
+          <ng-container matColumnDef="centredecout">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header>Centre de coût</th>
+            <td mat-cell *matCellDef="let element">{{ element.centredecout }}</td>
+          </ng-container>
+
+        <!-- Utilisateurs -->
+          <ng-container matColumnDef="utilisateurs">
+             <th mat-header-cell *matHeaderCellDef>Utilisateurs</th>
+             <td mat-cell *matCellDef="let element">
+          <button mat-icon-button color="accent" (click)="openUserListDialog(element.utilisateurs)">
+            <mat-icon>visibility</mat-icon>
+          </button>
+          
+          
+             </td>
+           </ng-container>
+
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+        </table>
+
+        <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<app-footer></app-footer>

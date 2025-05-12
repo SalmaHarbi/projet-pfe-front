@@ -1,0 +1,95 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 40px;
+  margin-left: 1rem;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* Ajoute un espace entre les sections */
+}
+
+.header-buttons {
+  display: flex;
+  gap: 10px; 
+  margin-right: 200px;/* Ajoute un espace entre les boutons */
+}
+
+.header-icons {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Ajoute un espace entre les icônes */
+}
+
+.header-icons button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-buttons button {
+  display: flex;
+  align-items: center;
+  gap: 5px; /* Ajoute un espace entre l'icône et le texte */
+  font-size: 14px;
+  color: #333;
+}
+
+button[mat-icon-button] {
+  color: rgb(0, 0, 0);
+  margin-left: 1rem;
+  background: none; /* Supprime l'arrière-plan */
+  box-shadow: none; /* Supprime les ombres */
+  border: none; /* Supprime les bordures */
+}
+
+button[mat-icon-button]:hover {
+  background: none; /* Supprime l'arrière-plan au survol */
+}
+
+mat-icon {
+  color: #000; /* Couleur de l'icône (noir) */
+  font-size: 24px; /* Ajustez la taille de l'icône si nécessaire */
+}
+
+.profile-container {
+  padding: 10px;
+  width: 200px;
+  text-align: center;
+}
+
+.profile-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.header-buttons mat-icon {
+  font-size: 20px;
+  color: #666;
+}
+
+.profile-info h3 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.profile-info p {
+  margin: 4px 0;
+  color: #666;
+}

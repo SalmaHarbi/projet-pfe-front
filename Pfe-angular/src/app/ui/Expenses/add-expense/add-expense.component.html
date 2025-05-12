@@ -1,0 +1,76 @@
+<form [formGroup]="noteForm" (ngSubmit)="ajouterDepense()" class="horizontal-form">
+    <!-- Titre -->
+    <div class="form-row">
+      <label for="categorie">Catégorie</label>
+      <input matInput formControlName="categorie" id="categorie">
+      <div *ngIf="noteForm.get('categorie')?.hasError('required') && noteForm.get('categorie')?.touched">
+        <small class="error-text">La catégorie est requise.</small>
+      </div>
+    </div>
+  
+    <!-- Date de soumission -->
+    <div class="form-row">
+      <label for="datedepense">Date de dépense</label>
+      <mat-form-field appearance="fill" class="date-field">
+        <input matInput [matDatepicker]="picker1" formControlName="datedepense" id="datedepense">
+        <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+        <mat-datepicker #picker1></mat-datepicker>
+      </mat-form-field>
+      <div *ngIf="noteForm.get('datedepense')?.hasError('required') && noteForm.get('datedepense')?.touched">
+        <small class="error-text">La date de dépense est requise.</small>
+      </div>
+    </div>
+  
+    <!-- Motif -->
+    <div class="form-row">
+      <label for="description">description</label>
+      <input matInput formControlName="description" id="description">
+      <div *ngIf="noteForm.get('description')?.hasError('required') && noteForm.get('description')?.touched">
+        <small class="error-text">La description est requise.</small>
+      </div>
+    </div>
+  
+    <!-- Statut -->
+    <div class="form-row">
+      <label for="montant">montant</label>
+      <input matInput formControlName="montant" id="montant">
+      <div *ngIf="noteForm.get('montant')?.hasError('montant') && noteForm.get('statut')?.touched">
+        <small class="error-text">Le montant est requis.</small>
+      </div>
+    </div>
+  
+    <div class="form-row">
+        <label for="montantconverti">montantconverti</label>
+        <input matInput formControlName="montantconverti" id="montantconverti">
+        <div *ngIf="noteForm.get('montantconverti')?.hasError('required') && noteForm.get('montantconverti')?.touched">
+          <small class="error-text">Le montant  converti est requis.</small>
+        </div>
+      </div>
+
+    <!-- Commentaire -->
+    <div class="form-row">
+      <label for="nomfournisseur">nomfournisseur</label>
+      <input matInput formControlName="nomfournisseur" id="nomfournisseur">
+      <div *ngIf="noteForm.get('nomfournisseur')?.hasError('required') && noteForm.get('nomfournisseur')?.touched">
+        <small class="error-text">Le nom du fournisseur  est requis.</small>
+      </div>
+    </div>
+
+    <div class="form-row">
+        <label for="indicateurfiscabilte">indicateurfiscabilte</label>
+        <input matInput formControlName="indicateurfiscabilte" id="indicateurfiscabilte">
+        <div *ngIf="noteForm.get('indicateurfiscabilte')?.hasError('required') && noteForm.get('indicateurfiscabilte')?.touched">
+          <small class="error-text">indicateur fiscabilte  est requis.</small>
+        </div>
+      </div>
+  
+  
+
+  
+    <!-- Boutons -->
+    <div class="form-row full-width-row">
+      <button mat-raised-button color="primary" type="submit">Ajouter la dépense</button>
+      <button mat-raised-button color="warn" type="button" (click)="annuler()" >Annuler</button>
+    </div>
+  </form>
+  

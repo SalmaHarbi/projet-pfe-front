@@ -1,0 +1,55 @@
+<div class="container mt-4">
+  <h2>Liste des Dépenses</h2>
+
+  <div *ngIf="isLoading">Chargement...</div>
+  <div *ngIf="errorMessage" class="alert alert-danger">{{ errorMessage }}</div>
+
+  <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8" *ngIf="!isLoading">
+
+    <!-- Date de dépense -->
+    <ng-container matColumnDef="datedepense">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Date Dépense </th>
+      <td mat-cell *matCellDef="let ndfs"> {{ ndfs.datedepense | date }} </td>
+    </ng-container>
+
+    <!-- Catégorie -->
+    <ng-container matColumnDef="categorie">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Catégorie </th>
+      <td mat-cell *matCellDef="let ndfs"> {{ ndfs.categorie }} </td>
+    </ng-container>
+
+    <!-- Description -->
+    <ng-container matColumnDef="description">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Description </th>
+      <td mat-cell *matCellDef="let ndfs"> {{ ndfs.description }} </td>
+    </ng-container>
+
+    <!-- Montant -->
+    <ng-container matColumnDef="montant">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Montant </th>
+      <td mat-cell *matCellDef="let ndfs"> {{ ndfs.montant }} </td>
+    </ng-container>
+
+    <!-- Montant converti -->
+    <ng-container matColumnDef="montantconverti">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Montant Converti </th>
+      <td mat-cell *matCellDef="let ndfs"> {{ ndfs.montantconverti }} </td>
+    </ng-container>
+
+    <!-- Nom fournisseur -->
+    <ng-container matColumnDef="nomfournisseur">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Nom Fournisseur </th>
+      <td mat-cell *matCellDef="let ndfs"> {{ ndfs.nomfournisseur }} </td>
+    </ng-container>
+
+    <!-- Indicateur fiscalité -->
+    <ng-container matColumnDef="indicateurfiscabilte">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Indicateur Fiscalité </th>
+      <td mat-cell *matCellDef="let ndfs"> {{ ndfs.indicateurfiscabilte }} </td>
+    </ng-container>
+
+    <!-- Header and Row Declarations -->
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+</div>

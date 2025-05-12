@@ -1,0 +1,83 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* Variables globales */
+$gutter: 1rem;
+
+/* Import des styles Angular Material */
+@import "../node_modules/@angular/material/prebuilt-themes/indigo-pink.css";
+
+/* Import des icônes Material */
+@import "../node_modules/material-design-icons/iconfont/material-icons.css";
+
+/* Import des animations Angular Material */
+@import "../node_modules/@angular/material/core/theming/all-theme.scss";
+
+/* Styles globaux */
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif; /* Police utilisée par Angular Material */
+  background-color: var(--background-color); /* Couleur de fond par défaut */
+}
+
+/* Variables globales */
+:root {
+  --primary-color: #3f51b5;
+  --background-color: #f5f5f5;
+  --surface-0: #f5f5f5; /* Couleur de fond claire */
+  --surface-50: #ffffff; /* Couleur de fond blanche */
+}
+
+/* Corps de la page */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--background-color);
+  margin: 0;
+  padding: 0;
+}
+
+/* Flexbox pour aligner les éléments */
+.flex {
+  display: flex;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+/* Classes utilitaires */
+.min-h-screen {
+  min-height: 100vh;
+}
+
+.min-w-screen {
+  min-width: 100vw;
+}
+
+/* Boutons et liens */
+button {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary-color);
+  cursor: pointer;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Images */
+img {
+  max-width: 100%;
+  height: auto;
+}

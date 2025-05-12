@@ -1,0 +1,33 @@
+<app-header-employee (toggleMenu)="toggleMenu()"></app-header-employee>
+<div class="layout">
+  <div class="content-wrapper">
+    <div class="stats-container">
+      <div class="stat-card">
+        <h3>Orders</h3>
+        <p>152</p>
+        <small>24 new since last visit</small>
+      </div>
+      <div class="stat-card">
+        <h3>Revenue</h3>
+        <p>$2,100</p>
+        <small>+52% since last week</small>
+      </div>
+      <div class="stat-card">
+        <h3>Customers</h3>
+        <p>28,441</p>
+        <small>520 newly registered</small>
+      </div>
+      <div class="stat-card">
+        <h3>Comments</h3>
+        <p>152 Unread</p>
+        <small>85 responded</small>
+      </div>
+    </div>
+
+
+    <div class="content" [class.full-width]="!isMenuVisible">
+      <h1>Welcome to Home Employee</h1>
+    </div>
+    <app-footer></app-footer>
+  </div>
+</div>

@@ -1,0 +1,46 @@
+<header class="header">
+    <div class="header-left">
+      <img src="assets/images/logosofrecom.png" alt="Company Logo" class="logo">
+    </div>
+    <div class="header-right">
+      <div class="header-buttons">
+        <button mat-button routerLink="/home-employee">
+          Acceuil
+        </button>
+        <button mat-button routerLink="/about-us-employee">
+          A propos 
+        </button>
+        <button mat-button routerLink="/expense-report-employee">
+          Notes de frais
+        </button>
+        <button mat-button routerLink="/expense-employee">
+          Dépenses
+        </button>
+        <button mat-button routerLink="/reports">
+          Rapports
+        </button>
+        
+      </div>
+      <div class="header-icons">
+        <button mat-icon-button>
+          <mat-icon>notifications</mat-icon>
+        </button>
+        <button mat-icon-button [matMenuTriggerFor]="profileMenu">
+          <mat-icon>account_circle</mat-icon>
+        </button>
+        <mat-menu #profileMenu="matMenu">
+          <div class="profile-container">
+            <img [src]="currentUser?.photo || 'assets/images/perso.jpg'" alt="Photo de profil" class="profile-avatar">
+            <div class="profile-info">
+              <h3>{{ currentUser?.given_name }} {{ currentUser?.family_name }}</h3>
+              <p>{{ currentUser?.email }}</p>
+              <button mat-raised-button color="primary" (click)="openProfileDialog()">View Profile</button>
+            </div>
+          </div>
+          <mat-divider></mat-divider>
+          <button mat-menu-item>Reset password</button>
+          <button mat-menu-item color="warn" (click)="logout()">Logout</button>
+        </mat-menu>
+      </div>
+    </div>
+  </header>

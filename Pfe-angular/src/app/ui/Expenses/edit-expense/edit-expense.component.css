@@ -1,0 +1,38 @@
+.form-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .form-row {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  
+  .form-label {
+    width: 180px;
+    font-weight: 500;
+  }
+  
+  .form-field {
+    flex: 1;
+  }
+  
+  mat-form-field {
+    width: 100%;
+  }
+  
+  mat-dialog-actions {
+    margin-top: 24px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+  }
+  
+  h2[mat-dialog-title] {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  

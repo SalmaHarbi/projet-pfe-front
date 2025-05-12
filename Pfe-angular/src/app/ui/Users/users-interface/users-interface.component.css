@@ -1,0 +1,123 @@
+/* Layout principal */
+.layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+  background-color: #f9f9f9;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Contenu principal */
+.content-wrapper {
+  flex: 1;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.content {
+  width: 100%;
+  max-width: 1200px;
+  background-color: #ffffff;
+  padding: 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  box-sizing: border-box;
+}
+
+/* Titre */
+
+  .table-title {
+    margin-bottom: 16px;
+    margin-left: 450px;
+  }
+  
+
+
+.table-title h2 {
+  margin: 0;
+  font-size: 24px;
+  color: #333;
+}
+
+/* Conteneur du champ de recherche + bouton */
+.header-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+/* Barre de recherche */
+.search-container {
+  width: 250px;
+}
+
+.search-bar {
+  width: 100%;
+}
+
+/* Tableau */
+.table-container {
+  overflow-x: auto;
+  margin-bottom: 20px;
+}
+
+table {
+  width: 100%;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+th.mat-header-cell,
+td.mat-cell {
+  padding: 12px;
+  text-align: left;
+}
+
+th.mat-header-cell {
+  background-color: #f1f1f1;
+  font-weight: 600;
+}
+
+tr.mat-row:nth-child(even) {
+  background-color: #fafafa;
+}
+.action-buttons {
+  display: flex;
+  flex-direction: row; /* ✅ horizontal */
+  gap: 8px; /* espace horizontal entre les icônes */
+  align-items: center;
+}
+
+
+/* Boutons d'action */
+button[mat-raised-button],
+button[mat-icon-button] {
+  font-size: 13px;
+  margin-right: 6px;
+}
+
+/* Bouton "Voir utilisateur" en bleu */
+button[mat-raised-button][color="accent"] {
+  background-color: #1976d2 !important;
+  color: #fff !important;
+  transition: background-color 0.3s ease;
+}
+
+button[mat-raised-button][color="accent"]:hover {
+  background-color: #1565c0 !important;
+}
+
+td.mat-cell button {
+  margin-right: 6px;
+}
+
+/* Paginator */
+mat-paginator {
+  margin-top: 16px;
+  display: flex;
+  justify-content: center;
+}
